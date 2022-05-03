@@ -23,7 +23,6 @@ public class Caja {
 		 * Notifica a la agencia recaudadora.
 		 */
 		precioTotal += factura.montoAPagar();
-		factura.registrarPago();
 	}
 	
 	public double precioAPagar() {

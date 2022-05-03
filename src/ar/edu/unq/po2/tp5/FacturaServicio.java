@@ -2,13 +2,9 @@ package ar.edu.unq.po2.tp5;
 
 public class FacturaServicio  implements Factura{
 	
-	private Agencia agencia;
 	private int costoPorUnidad;
 	private int cantUnidades;
-	
-	private void setAgencia(Agencia agencia) {
-		this.agencia = agencia;
-	}
+
 
 	private void setCostoPorUnidad(int costoPorUnidad) {
 		this.costoPorUnidad = costoPorUnidad;
@@ -18,15 +14,11 @@ public class FacturaServicio  implements Factura{
 		this.cantUnidades = cantUnidades;
 	}
 
-	public FacturaServicio(Agencia agencia, int costo, int cant) {
-		this.setAgencia(agencia);
+	public FacturaServicio(int costo, int cant) {
 		this.setCostoPorUnidad(costo);
 		this.setCantUnidades(cant);
 	}
 	
-	public void registrarPago() {
-		agencia.registrarPago(this);
-	}
 
 	@Override
 	public int montoAPagar() {
